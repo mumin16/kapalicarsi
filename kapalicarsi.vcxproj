@@ -126,7 +126,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,10 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="charting.h" />
-    <ClInclude Include="dde.h" />
-    <ClInclude Include="googlefinance.h" />
+    <ClInclude Include="datasource.h" />
     <ClInclude Include="gui.h" />
     <ClInclude Include="includes.h" />
+    <ClInclude Include="luascript.h" />
     <ClInclude Include="shading.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

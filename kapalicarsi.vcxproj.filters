@@ -26,16 +26,16 @@
     <ClInclude Include="includes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="googlefinance.h">
+    <ClInclude Include="charting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dde.h">
+    <ClInclude Include="datasource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="charting.h">
+    <ClInclude Include="luascript.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

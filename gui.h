@@ -1,17 +1,44 @@
 #pragma once
-#define MAX_VERTEX_BUFFER 512 * 1024
-#define MAX_ELEMENT_BUFFER 128 * 1024
-#define NK_INCLUDE_FIXED_TYPES
-#define NK_INCLUDE_STANDARD_IO
-#define NK_INCLUDE_DEFAULT_ALLOCATOR
-#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
-#define NK_INCLUDE_FONT_BAKING
-#define NK_INCLUDE_DEFAULT_FONT
-#define NK_IMPLEMENTATION
-#define NK_GLFW_GL3_IMPLEMENTATION
-#include <nuklear.h>
-#include <nuklear_glfw_gl3.h>
+#include <imgui/imgui.cpp>
+#include <imgui/imgui_draw.cpp>
+#include <imgui/imgui_impl_glfw_gl3.cpp>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <direct.h>//getcwd
 
+static auto vector_getter = [](void* vec, int idx, const char** out_text)
+{
+	auto& vector = *static_cast<std::vector<std::string>*>(vec);
+	if (idx < 0 || idx >= static_cast<int>(vector.size())) { return false; }
+	*out_text = vector.at(idx).c_str();
+	return true;
+};
+
+
+static char Symbol[256] = ".DJI";
+static int TimeFrames = 2;
+static int ChartType = 0;
+static int PriceType = 0;
+static int MAType = 0;
+static int IndPeriod = 15;
+//macd
+static int FastPeriod = 15;
+static int SlowPeriod = 15;
+static int SignalPeriod = 15;
+//stoch.
+static int FastK_Period = 15;
+static int SlowK_Period = 15;
+static int SlowK_MAType = 0;
+static int SlowD_Period = 15;
+static int SlowD_MAType = 0;
+
+static bool Volumeenabled = false;
+static bool Gridenabled = false;
+static bool realaccountenabled = false;
+static bool demoenabled = true;
+
+static float indcolor[3] = { 0.0f,1.0f,0.0f };
 
 class gui
 {
@@ -19,202 +46,365 @@ public:
 	gui();
 	~gui();
 	void render();
+
 private:
-	struct nk_context *ctx;
-	struct nk_color background;
-	struct nk_color PriceColor;
 
 };
 
-gui::gui()
+gui::gui() 
 {
-	ctx = nk_glfw3_init(window, NK_GLFW3_INSTALL_CALLBACKS);
-	/* Load Fonts: if none of these are loaded a default font will be used  */
-	{struct nk_font_atlas *atlas;
-	nk_glfw3_font_stash_begin(&atlas);
-	/*struct nk_font *droid = nk_font_atlas_add_from_file(atlas, "../../../extra_font/DroidSans.ttf", 14, 0);*/
-	/*struct nk_font *roboto = nk_font_atlas_add_from_file(atlas, "../../../extra_font/Roboto-Regular.ttf", 14, 0);*/
-	/*struct nk_font *future = nk_font_atlas_add_from_file(atlas, "../../../extra_font/kenvector_future_thin.ttf", 13, 0);*/
-	/*struct nk_font *clean = nk_font_atlas_add_from_file(atlas, "../../../extra_font/ProggyClean.ttf", 12, 0);*/
-	/*struct nk_font *tiny = nk_font_atlas_add_from_file(atlas, "../../../extra_font/ProggyTiny.ttf", 10, 0);*/
-	/*struct nk_font *cousine = nk_font_atlas_add_from_file(atlas, "../../../extra_font/Cousine-Regular.ttf", 13, 0);*/
-	nk_glfw3_font_stash_end();
-	/*nk_style_set_font(ctx, &droid->handle);*/}
-
-	/* style.c */
-	/*set_style(ctx, THEME_WHITE);*/
-	/*set_style(ctx, THEME_RED);*/
-	/*set_style(ctx, THEME_BLUE);*/
-	/*set_style(ctx, THEME_DARK);*/
-
-	background = nk_rgb(0, 0, 0);
-	PriceColor = nk_rgb(0, 255, 0);
+	ImGui_ImplGlfwGL3_Init(window, true);
 }
 
 gui::~gui()
 {
-	nk_glfw3_shutdown();
+	ImGui_ImplGlfwGL3_Shutdown();
 }
 
-
 void gui::render() {
-	nk_glfw3_new_frame();
-
-
-	/*mainmenu*/
-	struct nk_panel menubar,filemenu,viewmenu,chartsmenu, toolsmenu, windowmenu, helpmenu;
-	static int  show_openoffline, show_google, show_mt4dde, show_help, show_about = nk_false;
-
-	nk_begin(ctx,  "MENUBAR", nk_rect(0, 0, WindowWidth, 25), 0);
-	
-
-	nk_menubar_begin(ctx);
-	nk_layout_row_begin(ctx, NK_STATIC, 10, 7);
-	nk_layout_row_push(ctx, 60);
-	if (nk_menu_begin_label(ctx,  "File", NK_TEXT_LEFT, nk_vec2(100, 150)))
+	ImGui_ImplGlfwGL3_NewFrame();
+	/**/
+	if (ImGui::BeginMainMenuBar())
 	{
+		//
+		if (ImGui::BeginMenu("File"))
+		{
+			if (ImGui::BeginMenu("Google"))
+			{
+				
+				ImGui::PushItemWidth(50);
+				ImGui::InputText("Symbol", Symbol,256, ImGuiInputTextFlags_CharsUppercase);
+				ImGui::SameLine();
+				ImGui::Combo("TimeFrames", &TimeFrames, "M1\0M5\0M15\0M30\0M60\0D\0\0");
+				ImGui::SameLine();
+				std::vector<char*> tf = { "60","300","900","1800","3600","86400" };
+				if (ImGui::Button("Load"))
+				{
+					DataSource::PriceData dummy;
+					if (FALSE == DataSource::Google(dummy,Symbol, tf[TimeFrames]))return;
+					delete chart;
+					chart=new charting(dummy,0);
+					memset(&Symbol, 0, sizeof(Symbol));
 
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "Open Offline", NK_TEXT_LEFT))
-			show_openoffline = nk_true;
-		if (nk_menu_item_label(ctx, "Google", NK_TEXT_LEFT))
-			show_google = nk_true;
-		if (nk_menu_item_label(ctx, "MT4 DDE", NK_TEXT_LEFT))
-			show_mt4dde = nk_true;
-		if (nk_menu_item_label(ctx, "Help", NK_TEXT_LEFT))
-			show_help = nk_true;
-		if (nk_menu_item_label(ctx, "About", NK_TEXT_LEFT))
-			show_about = nk_true;
-		if (nk_menu_item_label(ctx, "Exit", NK_TEXT_LEFT))
-			exit(EXIT_SUCCESS);
+				}
+				//memset(Symbol, 0, sizeof(Symbol));
+				ImGui::EndMenu();
+			}
+			
+			if (ImGui::BeginMenu("MT4 *.csv")) 
+			{
+				ImGui::PushItemWidth(100);
+				char searchDirectory[MAX_PATH];
+				char csvfilename[MAX_PATH]="GBPJPY";
+				
 
-		nk_menu_end(ctx);
+				_getcwd(searchDirectory, MAX_PATH);
+
+				std::string file = searchDirectory;
+				file.append("\\"); file.append(csvfilename); file.append(".csv");
+				
+				if (ImGui::Button("Open  ")) { 
+					DataSource::PriceData dummy;
+					if (FALSE == DataSource::Mt4Csv(dummy, file))return;
+					delete chart;
+					chart = new charting(dummy, 0);
+				}
+				ImGui::SameLine();
+				ImGui::InputText("Directory", searchDirectory, MAX_PATH);
+				ImGui::SameLine();
+				ImGui::InputText("Filename", csvfilename, MAX_PATH);
+				ImGui::EndMenu();
+			}
+
+			if (ImGui::BeginMenu("MT4 DDE"))
+			{
+				ImGui::PushItemWidth(50);
+				if (ImGui::Button("Connect")) { printf("%s LOAD!\n", Symbol); }
+				ImGui::SameLine();
+				ImGui::InputText("Symbol", Symbol, 256, ImGuiInputTextFlags_CharsUppercase);
+				ImGui::EndMenu();
+			}
+
+			if (ImGui::BeginMenu("Metastock")) 
+			{
+				static char MetastockSearchDirectory[MAX_PATH] = "./msdir";
+				static int listbox_item_current = 0;
+				static DataSource::Metastock::Info info;
+				if (ImGui::Button("Scan")) { info = { 0 }; DataSource::Metastock::GetInfo(MetastockSearchDirectory, info); }// ""'s mean is metastock files are in current directory.
+				ImGui::SameLine();
+				ImGui::InputText("Directory", MetastockSearchDirectory, MAX_PATH);
+				
+				if (ImGui::Button("Open")) { 
+					DataSource::PriceData dummy;
+					if (FALSE == DataSource::Metastock::BySymbol(dummy,info, info.symbols.at(listbox_item_current).c_str()))return;
+					delete chart;
+					chart = new charting(dummy, 0);
+				}
+				ImGui::SameLine();
+				ImGui::Combo("Symbols", &listbox_item_current, vector_getter, static_cast<void*>(&info.symbols), info.symbols.size(), 40);
+				ImGui::EndMenu();
+			}
+
+
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Help")) {ImGui::Text("http://veriaktar.blogspot.com.tr/");	ImGui::Separator();	ImGui::Text("youtube.com/veriaktar"); ImGui::EndMenu();	}
+			if (ImGui::BeginMenu("About")) { ImGui::Text("MUMIN GULER");	ImGui::Separator();	ImGui::Text("mumin16@hotmail.com"); ImGui::EndMenu(); }
+			if (ImGui::MenuItem("Exit")) { exit(EXIT_SUCCESS); }
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Chart"))
+		{
+			ImGui::PushItemWidth(75);
+			ImGui::Combo("TimeFrames", &TimeFrames, "D\0M1\0M5\0M15\0M30\0M60\0\0");
+			ImGui::Combo("ChartType", &ChartType, "Line\0OHLC\0Candlestick\0\0");
+			if (ImGui::MenuItem("Color scheme")) {}
+			ImGui::MenuItem("Volume", "", &Volumeenabled);
+			ImGui::MenuItem("Grid", "", &Gridenabled);
+			ImGui::Separator();
+			if (ImGui::MenuItem("Object List")) {}
+			if (ImGui::MenuItem("Clear All")) {}
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Draw"))
+		{
+			if (ImGui::MenuItem("Fibonacci")) {}
+			if (ImGui::MenuItem("Gann")) {}
+			if (ImGui::MenuItem("Line")) {}
+			ImGui::Separator();
+			if (ImGui::MenuItem("Shapes")) {}
+			if (ImGui::MenuItem("Arrows")) {}
+			if (ImGui::MenuItem("Text")) {}
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Indicators"))
+		{
+			if (ImGui::MenuItem("Indicator Editor")) {}
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Rate Of Change"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add"))
+				{
+					if (chart){
+						PANEL panel;
+						panel.data= lua->function("ROC", PriceType, IndPeriod);
+						panel.name = "ROC";
+						panel.color[0] = indcolor[0]; panel.color[1] = indcolor[1]; panel.color[2] = indcolor[2];
+						chart->addPanel(panel);
+					}
+				}
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::Combo("Price Type", &PriceType, "Close\0Open\0High\0Low\0Median\0Typical\0Weighted\0\0");
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Momentum"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add"))
+				{
+					if (chart) {
+						PANEL panel;
+						panel.data = lua->function("MOMENTUM", PriceType, IndPeriod);
+						panel.name = "MOMENTUM";
+						panel.color[0] = indcolor[0]; panel.color[1] = indcolor[1]; panel.color[2] = indcolor[2];
+						chart->addPanel(panel);
+					}
+				}
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::Combo("Price Type", &PriceType, "Close\0Open\0High\0Low\0Median\0Typical\0Weighted\0\0");
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Average True Range"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) 
+				{ 
+					if (chart) {
+						PANEL panel;
+						panel.data = lua->function("ATR",  IndPeriod);
+						panel.name = "ATR";
+						panel.color[0] = indcolor[0]; panel.color[1] = indcolor[1]; panel.color[2] = indcolor[2];
+						chart->addPanel(panel);
+					}
+				}
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Moving Avarage"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) 
+				{ 
+						//int BegIdx, NbElement;
+						//std::vector<double> ind;
+						//ind.resize(chart->chartpricedata.close.size());
+						//TA_MA(0, chart->chartpricedata.close.size()-1, chart->chartpricedata.close.data(), IndPeriod,
+						//(TA_MAType)MAType,
+						//&BegIdx,
+						//&NbElement,
+						//ind.data());
+						//std::rotate(ind.rbegin(), ind.rbegin() + BegIdx, ind.rend());
+						//chart->rawMainPanel.push_back(ind);
+						//chart->mainpanelcount += 1;
+						//chart->BegIdx.push_back(BegIdx);
+						//panel Panel;
+						//Panel.color[0] = indcolor[0];
+						//Panel.color[1] = indcolor[1];
+						//Panel.color[2] = indcolor[2];
+						//chart->panels.push_back(Panel);
+						//chart->zoom_pan();
+				
+				}
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::Combo("Type", &MAType, "Sma\0Ema\0Wma\0Dema\0Tema\0Trima\0Kama\0Mama\0T3\0\0");
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("CCI"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("MACD"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("FastPeriod", &FastPeriod, 1);
+				ImGui::InputInt("SlowPeriod", &SlowPeriod, 1);
+				ImGui::InputInt("SignalPeriod", &SignalPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Stochastic"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("FastK_Period", &FastK_Period, 1);
+				ImGui::InputInt("SlowK_Period", &SlowK_Period, 1);
+				ImGui::Combo("SlowK_MAType", &SlowK_MAType, "Sma\0Ema\0Wma\0Dema\0Tema\0Trima\0Kama\0Mama\0T3\0\0");
+				ImGui::InputInt("SlowD_Period", &SlowD_Period, 1);
+				ImGui::Combo("SlowD_MAType", &SlowD_MAType, "Sma\0Ema\0Wma\0Dema\0Tema\0Trima\0Kama\0Mama\0T3\0\0");
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("RSI"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("ADX"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Williams' %R"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::MenuItem("BBANDS")) {}
+			if (ImGui::MenuItem("Parabolic SAR")) {}
+			if (ImGui::BeginMenu("Money Flow Index"))
+			{
+				ImGui::PushItemWidth(100);
+				if (ImGui::Button("Add")) { printf("%s %i LOAD!\n", Symbol, TimeFrames); }
+				ImGui::InputInt("Period", &IndPeriod, 1);
+				ImGui::ColorEdit3("Color", indcolor);
+				ImGui::EndMenu();
+			}
+			if (ImGui::MenuItem("On Balance Volume")) {}
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Custom"))
+			{
+
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Test"))
+		{
+			if (ImGui::MenuItem("Test Editor")) {}
+			ImGui::Separator();
+			if (ImGui::MenuItem("Test1")) {}
+			if (ImGui::MenuItem("Test2")) {}
+			if (ImGui::MenuItem("Testn")) {}
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Custom"))
+			{
+
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Explorer"))
+		{
+			if (ImGui::MenuItem("Explorer Editor")) {}
+			ImGui::Separator();
+			if (ImGui::MenuItem("Explorer1")) {}
+			if (ImGui::MenuItem("Explorer2")) {}
+			if (ImGui::MenuItem("Explorern")) {}
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Custom"))
+			{
+
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenu();
+		}
+		//
+		if (ImGui::BeginMenu("Portfoy"))
+		{
+			if (ImGui::MenuItem("Report")) {}
+			ImGui::Separator();
+			if (ImGui::MenuItem("Buy")) {}
+			if (ImGui::MenuItem("Sell")) {}
+			if (ImGui::MenuItem("Close")) {}
+			ImGui::Separator();
+			if (ImGui::BeginMenu("Login"))
+			{
+				if (ImGui::MenuItem("Demo Account", "", &demoenabled)) {
+					realaccountenabled = !realaccountenabled;
+				}
+				if (ImGui::MenuItem("Real account", "", &realaccountenabled)) {
+					demoenabled = !demoenabled;
+				}
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenu();
+		}
+	ImGui::EndMainMenuBar();
+	/**/
+
 	}
-	//nk_layout_row_end(ctx);
-
-
-	if (nk_menu_begin_label(ctx,  "Chart", NK_TEXT_LEFT, nk_vec2(100, 250)))
-	{
-
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "Line", NK_TEXT_LEFT))
-			bool line = nk_true;
-		if (nk_menu_item_label(ctx, "OHLC", NK_TEXT_LEFT))
-			bool ohlc = nk_true;
-		if (nk_menu_item_label(ctx, "Candlesticks", NK_TEXT_LEFT))
-			bool candle = nk_true;
-		if (nk_menu_item_label(ctx, "Volume", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Grid", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Color scheme", NK_TEXT_LEFT))
-			bool bcolor = nk_true;
-		if (nk_menu_item_label(ctx, "Object list", NK_TEXT_LEFT))
-			bool olist = nk_true;
-		if (nk_menu_item_label(ctx, "Clean All", NK_TEXT_LEFT))
-			bool olist = nk_true;
-		nk_menu_end(ctx);
-	}
-
-	if (nk_menu_begin_label(ctx, "Draw", NK_TEXT_LEFT, nk_vec2(100, 150)))
-	{
-
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "Line", NK_TEXT_LEFT))
-			bool testeditor = nk_true;
-		if (nk_menu_item_label(ctx, "Fibonacci", NK_TEXT_LEFT))
-			bool test1 = nk_true;
-		if (nk_menu_item_label(ctx, "Gann", NK_TEXT_LEFT))
-			bool testn = nk_true;
-		if (nk_menu_item_label(ctx, "Shapes", NK_TEXT_LEFT))
-			bool testn = nk_true;
-		if (nk_menu_item_label(ctx, "Arrows", NK_TEXT_LEFT))
-			bool testn = nk_true;
-		if (nk_menu_item_label(ctx, "Text", NK_TEXT_LEFT))
-			bool testn = nk_true;
-		nk_menu_end(ctx);
-	}
-
-	if (nk_menu_begin_label(ctx,  "F(x)", NK_TEXT_LEFT, nk_vec2(150, 400)))
-	{
-
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "F(x) Editor", NK_TEXT_LEFT))
-			bool test = nk_true;
-		if (nk_menu_item_label(ctx, "Moving Average", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "CCI", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "MACD", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Stochastic", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "RSI", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Momentum", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "ADX", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "ATR", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Williams' %R", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Standard Deviation", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "BBANDS", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Parabolic SAR", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Money Flow Index", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "On Balance Volume", NK_TEXT_LEFT))
-			bool add = nk_true;
-		if (nk_menu_item_label(ctx, "Custom", NK_TEXT_LEFT))
-			bool add = nk_true;
-	nk_menu_end(ctx);
-	}
 
 
 
-	if (nk_menu_begin_label(ctx,  "Test", NK_TEXT_LEFT, nk_vec2(100, 150)))
-	{
-
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "Test Editor", NK_TEXT_LEFT))
-			bool testeditor = nk_true;
-		if (nk_menu_item_label(ctx, "Test1", NK_TEXT_LEFT))
-			bool test1 = nk_true;
-		if (nk_menu_item_label(ctx, "Testn", NK_TEXT_LEFT))
-			bool testn = nk_true;
-
-		nk_menu_end(ctx);
-	}
-
-	if (nk_menu_begin_label(ctx,  "Explorer", NK_TEXT_LEFT, nk_vec2(100, 150)))
-	{
-
-		nk_layout_row_dynamic(ctx, 20, 1);
-		if (nk_menu_item_label(ctx, "Exp.Editor", NK_TEXT_LEFT))
-			bool expeditor = nk_true;
-		if (nk_menu_item_label(ctx, "Explorer1", NK_TEXT_LEFT))
-			bool exp1 = nk_true;
-		if (nk_menu_item_label(ctx, "Explorern", NK_TEXT_LEFT))
-			bool expn = nk_true;
-
-		nk_menu_end(ctx);
-	}
-
-
-	nk_menubar_end(ctx);
-	nk_end(ctx);
-
-
-
-
-	/* Draw */
-	{float bg[4];
-	nk_color_fv(bg, background);
-	glClearColor(bg[0], bg[1], bg[2], bg[3]);
-	nk_glfw3_render(NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
-	 }
+	// Rendering
+	int display_w, display_h;
+	glfwGetFramebufferSize(window, &display_w, &display_h);
+	glViewport(0, 0, display_w, display_h);
+	//ImVec4 clear_color = ImColor(114, 144, 154);
+	//glClearColor(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
+	glClear(GL_COLOR_BUFFER_BIT);
+	ImGui::Render();
 }

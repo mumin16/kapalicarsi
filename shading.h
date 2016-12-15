@@ -71,7 +71,7 @@ void shading::demoshader() {
 		varying vec4 fColor;
 	void main()
 	{
-		gl_FragColor = fColor;//vec4(0.0, 1.0, 0.0, 1.0);
+		gl_FragColor = vec4(fColor);//vec4(0.0, 1.0, 0.0, 1.0);
 	}
 	);
 
