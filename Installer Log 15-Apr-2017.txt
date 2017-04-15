@@ -1,0 +1,915 @@
+Apr 15 11:56:18 localhost opendirectoryd[123]: opendirectoryd (build 382.20.2) launched - installer mode
+Apr 15 11:56:18 localhost opendirectoryd[123]: Logging level limit changed to 'notice'
+Apr 15 11:56:18 localhost configd[113]: adding  com.apple.SystemConfiguration.InterfaceNamer
+Apr 15 11:56:18 localhost configd[113]: adding  com.apple.SystemConfiguration.SCNetworkReachability
+Apr 15 11:56:18 localhost configd[113]: loading com.apple.SystemConfiguration.ISPreference
+Apr 15 11:56:18 localhost opendirectoryd[123]: Initialize trigger support
+Apr 15 11:56:18 localhost opendirectoryd[123]: created endpoint for mach service 'com.apple.private.opendirectoryd.rpc'
+Apr 15 11:56:18 localhost opendirectoryd[123]: set default handler for RPC 'reset_cache'
+Apr 15 11:56:18 localhost opendirectoryd[123]: set default handler for RPC 'reset_statistics'
+Apr 15 11:56:18 localhost opendirectoryd[123]: set default handler for RPC 'show'
+Apr 15 11:56:18 localhost opendirectoryd[123]: starting endpoint for service 'com.apple.private.opendirectoryd.rpc'
+Apr 15 11:56:18 localhost opendirectoryd[123]: no dynamic data found at '/System/Library/OpenDirectory/DynamicData/Configure.plist'
+Apr 15 11:56:18 localhost opendirectoryd[123]: Registered node with name '/Configure' as hidden
+Apr 15 11:56:18 localhost opendirectoryd[123]: no dynamic data found at '/System/Library/OpenDirectory/DynamicData/Local.plist'
+Apr 15 11:56:18 localhost opendirectoryd[123]: Registered node with name '/Local' as hidden
+Apr 15 11:56:19 localhost configd[113]: com.apple.SystemConfiguration.ISPreference load failed
+Apr 15 11:56:19 localhost configd[113]: dlopen_preflight(/System/Library/SystemConfiguration/InternetSharingPreference.bundle/Contents/MacOS/InternetSharingPreference): Library not loaded: /System/Library/PrivateFrameworks/Netrb.framework/Versions/A/Netrb
+Apr 15 11:56:19 localhost configd[113]:   Referenced from: /System/Library/SystemConfiguration/InternetSharingPreference.bundle/Contents/MacOS/InternetSharingPreference
+Apr 15 11:56:19 localhost configd[113]:   Reason: image not found
+Apr 15 11:56:19 localhost configd[113]: loading com.apple.SystemConfiguration.ApplicationFirewall
+Apr 15 11:56:19 localhost configd[113]: adding  com.apple.SystemConfiguration.KernelEventMonitor
+Apr 15 11:56:19 localhost configd[113]: adding  com.apple.SystemConfiguration.LinkConfiguration
+Apr 15 11:56:19 localhost configd[113]: adding  com.apple.SystemConfiguration.PreferencesMonitor
+Apr 15 11:56:19 localhost configd[113]: loading com.apple.SystemConfiguration.EAPOLController
+Apr 15 11:56:19 localhost configd[113]: loading com.apple.SystemConfiguration.IPConfiguration
+Apr 15 11:56:19 localhost configd[113]: adding  com.apple.SystemConfiguration.IPMonitor
+Apr 15 11:56:19 localhost configd[113]: skipped com.apple.SystemConfiguration.Logger (disabled)
+Apr 15 11:56:19 localhost configd[113]: updateConfiguration(): no preferences.
+Apr 15 11:56:20 localhost configd[113]: LSExceptions [0x7fb9f5b024e0] loaded
+Apr 15 11:56:21 localhost opendirectoryd[123]: 124.1 - Client: apsd, UID: 0, EUID: 0, GID: 0, EGID: 0
+Apr 15 11:56:21 localhost opendirectoryd[123]: 124.1 - ODNodeCreateWithNameAndOptions request, SessionID: 00000000-0000-0000-0000-000000000000, Name: /Search, Options: 0x0
+Apr 15 11:56:21 localhost opendirectoryd[123]: 124.1 - ODNodeCreateWithNameAndOptions failed with error 'Unknown node name' (2000)
+Apr 15 11:56:23 localhost configd[113]: network changed.
+Apr 15 11:56:23 localhost configd[113]: network changed: DNS*
+Apr 15 11:56:23 Mac-Pro.local configd[113]: setting hostname to "Mac-Pro.local"
+Apr 15 11:56:29 Mac-Pro.local Unknown[377]: kern.boottime: { sec = 1492282573, usec = 0 } Sat Apr 15 11:56:13 2017
+Apr 15 11:56:29 Mac-Pro.local Unknown[386]: Launching the Language Chooser for an OS Install
+Apr 15 11:56:31 Mac-Pro.local configd[113]: LSExceptions [0x7fb9f5b024e0] unloaded
+Apr 15 11:56:36 Mac-Pro.local opendirectoryd[123]: 124 - Client: 'apsd', exited with 0 session(s), 0 node(s) and 0 active request(s)
+Apr 15 11:56:36 Mac-Pro.local configd[113]: InterfaceNamer: No current set
+Apr 15 11:56:36 Mac-Pro.local configd[113]: New network configuration saved
+Apr 15 11:56:37 Mac-Pro.local configd[113]: network changed.
+Apr 15 11:56:41 Mac-Pro.local Language Chooser[387]: Setting system to install/recovery mode.
+Apr 15 11:56:41 Mac-Pro.local Unknown[388]: Setting boot completed.
+Apr 15 11:57:12 Mac-Pro.local Language Chooser[387]: LCA+BT2: failed to get BT host controller after 30 seconds
+Apr 15 11:57:12 Mac-Pro.local Language Chooser[387]: LCA+BT2: BT host controller appeared after 30 seconds
+Apr 15 11:57:12 Mac-Pro.local Language Chooser[387]: Could not read prev-lang:kbd to set keyboard.
+Apr 15 11:57:41 Mac-Pro.local Language Chooser[387]: Progress window is timing out waiting for other applications to launch.
+Apr 15 11:57:42 Mac-Pro.local Language Chooser[387]: LCA+BT2: failed to get BT host controller after 30 seconds
+Apr 15 11:57:42 Mac-Pro.local Language Chooser[387]: LCA+BT2: BT host controller appeared after 30 seconds
+Apr 15 11:58:12 Mac-Pro.local Language Chooser[387]: LCA+BT2: failed to get BT host controller after 30 seconds
+Apr 15 11:58:12 Mac-Pro.local Language Chooser[387]: LCA+BT2: BT host controller appeared after 30 seconds
+Apr 15 11:58:12 Mac-Pro.local Language Chooser[387]: Ordering out cinematic windows.
+Apr 15 11:58:12 Mac-Pro.local Language Chooser[387]: Not hiding Language Chooser in progress callback
+Apr 15 11:58:20 Mac-Pro.local Language Chooser[387]: Launching the Installer using language code "en"
+Apr 15 11:58:20 Mac-Pro.local OSInstaller[401]: LSExceptions [0x7fba14a004d0] loaded
+Apr 15 11:58:21 Mac-Pro.local storagekitd[402]: Starting SKDaemon...
+Apr 15 11:58:21 Mac-Pro.local storagekitd[402]: Client entitled for destructive operations
+Apr 15 11:58:21 Mac-Pro.local storagekitd[402]: Adding client connection <NSXPCConnection: 0x7fe3db100250> connection from pid 401
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: connection test:success
+Apr 15 11:58:21 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:21.332 OS X Installer[401:2991] connection test:success
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: No mutable product specified in NVRAM.
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: We are not image source booted ignoring automation backup.
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: No mutable product specified on boot disk.
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Hardware: MacPro5,1 @ 3.61 GHz (x 8), 4096 MB RAM
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Running OS Build: Mac OS X 10.10.5 (14F27)
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: PATH=/usr/bin:/bin:/usr/sbin:/sbin
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: PWD=/
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: XPC_FLAGS=0x0
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: XPC_SERVICE_NAME=0
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: SHLVL=1
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: __OSINSTALL_ENVIRONMENT=1
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: CI_DEFAULT_OPENCL_USAGE=0
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: OS_INSTALL=1
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Env: _=/System/Library/CoreServices/Language Chooser.app/Contents/MacOS/Language Chooser
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Mutable product: Looking for automation file at (null)
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: No file at (null)
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Install Config: Looking for automation file at (null)
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: No file at /System/Installation/Packages/Extras/minstallconfig.xml
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Looking for automation file at (null)
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Install will not be automated.
+Apr 15 11:58:21 Mac-Pro.local OSInstaller[401]: Install will performed using distribution/collection at /System/Installation/Packages/OSInstall.mpkg.
+Apr 15 11:58:21 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:21.977 OS X Installer[401:2991] ***storageTaskManagerExistsWithIdentifier:withIdentifier failed: Error Domain=NSCocoaErrorDomain Code=4099 "Couldn’t communicate with a helper application." (The connection to service named com.apple.nsurlstorage-cache was invalidated.) UserInfo=0x7fba14b04ad0 {NSDebugDescription=The connection to service named com.apple.nsurlstorage-cache was invalidated.}; {
+Apr 15 11:58:21 Mac-Pro.local Unknown[388]:     NSDebugDescription = "The connection to service named com.apple.nsurlstorage-cache was invalidated.";
+Apr 15 11:58:21 Mac-Pro.local Unknown[388]: }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Waiting for target evaluation.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Starting target evaluation queue.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: connection test:success
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating install check for (null)
+Apr 15 11:58:22 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:22.258 OS X Installer[401:2982] connection test:success
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Install check successful.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating 15 disks
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk5 Mount point: /private/var/run Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk13 Mount point: /Library/Keychains Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk3 Mount point: /Volumes Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk12 Mount point: /Library/Preferences/SystemConfiguration Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk8 Mount point: /private/var/folders Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk11 Mount point: /Library/Preferences Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk6 Mount point: /System/Installation Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk10 Mount point: /Library/ColorSync/Profiles/Displays Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk4 Mount point: /private/var/tmp Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk0s2 Mount point: / Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: YosemiteAMD is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk2 Mount point: /private/var/log Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk9 Mount point: /private/var/root/Library Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s1 Mount point: /Volumes/New Volume Role: kSKDiskRoleWindowsData Type: kSKDiskTypeNTFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: New Volume is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk14 Mount point: /private/var/tmp/RecoveryTemp Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk7 Mount point: /private/var/db Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Finished target evaluation.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating 14 disks
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk5 Mount point: /private/var/run Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk13 Mount point: /Library/Keychains Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk3 Mount point: /Volumes Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk12 Mount point: /Library/Preferences/SystemConfiguration Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk8 Mount point: /private/var/folders Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk11 Mount point: /Library/Preferences Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk6 Mount point: /System/Installation Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk10 Mount point: /Library/ColorSync/Profiles/Displays Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk4 Mount point: /private/var/tmp Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk0s2 Mount point: / Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: YosemiteAMD is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk2 Mount point: /private/var/log Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk9 Mount point: /private/var/root/Library Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk14 Mount point: /private/var/tmp/RecoveryTemp Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk7 Mount point: /private/var/db Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:22 Mac-Pro.local OSInstaller[401]: untitled is a valid target.
+Apr 15 11:58:22 Mac-Pro.local Language Chooser[387]: Hiding Language Chooser in window counter
+Apr 15 11:58:22 Mac-Pro.local Unknown[388]: Keyboard Layouts: duplicate keyboard layout identifier -16899.
+Apr 15 11:58:22 Mac-Pro.local Unknown[388]: Keyboard Layouts: keyboard layout identifier -16899 has been replaced with -28673.
+Apr 15 11:58:22 Mac-Pro.local Unknown[388]: Keyboard Layouts: duplicate keyboard layout identifier -16900.
+Apr 15 11:58:22 Mac-Pro.local Unknown[388]: Keyboard Layouts: keyboard layout identifier -16900 has been replaced with -28674.
+Apr 15 11:58:26 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:26.496 Disk Utility[405:3072] Failed to connect (cancelRecreate) outlet from (DUWindowController) to (NSButton): missing setter or instance variable
+Apr 15 11:58:26 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:26.496 Disk Utility[405:3072] Failed to connect (repairSheetInfo) outlet from (DUWindowController) to (NSTextField): missing setter or instance variable
+Apr 15 11:58:27 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:27.055 Disk Utility[405:3072] 10.4-style NSNumberFormatter method called on a 10.0-style formatter, which doesn't work. Break on _NSNumberFormatter_Log_New_Methods_On_Old_Formatters to debug. This message will only be logged once.
+Apr 15 11:58:31 Mac-Pro.local OSInstaller[401]: LSExceptions [0x7fba14a004d0] unloaded
+Apr 15 11:58:39 Mac-Pro.local Unknown[388]: 2017-04-15 11:58:39.068 Disk Utility[405:3072] setCanDrawSubviewsIntoLayer:YES should not be called with layerContentsRedrawPolicy set to NSViewLayerContentsRedrawNever
+Apr 15 11:58:48 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMToolPartitionDisk changeGUIDKeysToPartIDKeys:forDictionary:]: inPartitionsArr=(
+	        {
+	        Flags = 1;
+	        GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	        Name = "EFI System Partition";
+	        Offset = 40;
+	        "Partition ID" = 1;
+	        Size = 409600;
+	        Type = EFI;
+	    },
+	        {
+	        Flags = 9;
+	        GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	        Name = "Untitled 1";
+	        Offset = 409640;
+	        "Partition ID" = 2;
+	        Size = 976101344;
+	        Type = "Apple_HFS";
+	    }
+	) inoutDict(bef)={
+	    "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A" =     {
+	        Erase = 0;
+	        Existed = 0;
+	        FilesystemName = "Journaled HFS+";
+	        Name = "Untitled 1";
+	        Newfs = 1;
+	        Size = 0;
+	    };
+	}
+Apr 15 11:58:48 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk changeGUIDKeysToPartIDKeys:forDictionary:]: listOfKeys=(
+	    "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A"
+	)
+Apr 15 11:58:48 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk changeGUIDKeysToPartIDKeys:forDictionary:]: . k=451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A p={
+	    Flags = 9;
+	    GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	    Name = "Untitled 1";
+	    Offset = 409640;
+	    "Partition ID" = 2;
+	    Size = 976101344;
+	    Type = "Apple_HFS";
+	}
+Apr 15 11:58:48 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk changeGUIDKeysToPartIDKeys:forDictionary:]: . CHANGING KEY: old=451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A new=2
+Apr 15 11:58:48 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMToolPartitionDisk changeGUIDKeysToPartIDKeys:forDictionary:]: retVal=0 inoutDict(aft)={
+	    2 =     {
+	        Erase = 0;
+	        Existed = 0;
+	        FilesystemName = "Journaled HFS+";
+	        Name = "Untitled 1";
+	        Newfs = 1;
+	        Size = 0;
+	    };
+	}
+Apr 15 11:58:52 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:58:52 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:58:52 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:04 Mac-Pro.local OSInstaller[401]: connection test:success
+Apr 15 11:59:04 Mac-Pro.local Unknown[388]: 2017-04-15 11:59:04.545 OS X Installer[401:3159] connection test:success
+Apr 15 11:59:11 Mac-Pro.local OSInstaller[401]: Disabling system idle sleep.
+Apr 15 11:59:11 Mac-Pro.local OSInstaller[401]: X /Volumes/Untitled 1: Missing CoreServices.
+Apr 15 11:59:11 Mac-Pro.local OSInstaller[401]: OSI: com.apple.pkg.BaseSystemResources remapped external root path to: /
+Apr 15 11:59:11 Mac-Pro.local OSInstaller[401]: Won't convert to CS, machine is not a portable
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Repairing file system.
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: Not Mounted Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Checking Journaled HFS Plus volume.
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Checking extents overflow file.
+Apr 15 11:59:12 Mac-Pro.local OSInstaller[401]: Checking catalog file.
+Apr 15 11:59:13 Mac-Pro.local OSInstaller[401]: Checking multi-linked files.
+Apr 15 11:59:13 Mac-Pro.local OSInstaller[401]: Checking catalog hierarchy.
+Apr 15 11:59:13 Mac-Pro.local OSInstaller[401]: Checking extended attributes file.
+Apr 15 11:59:15 Mac-Pro.local OSInstaller[401]: Checking volume bitmap.
+Apr 15 11:59:15 Mac-Pro.local OSInstaller[401]: Checking volume information.
+Apr 15 11:59:15 Mac-Pro.local OSInstaller[401]: The volume Untitled 1 appears to be OK.
+Apr 15 11:59:15 Mac-Pro.local OSInstaller[401]: File system check exit code is 0.
+Apr 15 11:59:15 Mac-Pro.local OSInstaller[401]: Updating boot support partitions for the volume as required.
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: Not Mounted Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Repair completed successfully.
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:16 Mac-Pro.local OSInstaller[401]: Container dmg is missing universal diagnostics. This install will continue attempting to perserve existing diagnostic software...
+Apr 15 11:59:16 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: inParams={
+	    Bless = 1;
+	    DIAGDMGChunkFile = "<null>";
+	    DIAGDMGFile = "<null>";
+	    DonorDiskUDSW = "disk1s2 Untitled 1";
+	    OSXDMGChunkFile = "//BaseSystem.chunklist";
+	    OSXDMGFile = "//BaseSystem.dmg";
+	    RepairDonor = 0;
+	    VerifyImage = 0;
+	}
+Apr 15 11:59:16 Mac-Pro.local storagekitd[402]: Install recovery system operation began
+Apr 15 11:59:16 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: donor disk's storage system is simple so it itself will be the donor
+Apr 15 11:59:16 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: normalized donor: logical=0x7fbd84105648=disk1s2=Untitled 1=(iflvuuid=(null)) physical=0x10927ec10=disk1s2=Untitled 1=disk1s2 storage=(null)
+Apr 15 11:59:16 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMRecoveryFileCopier setOSXImageFile:DIAGSImageFile:OSXChunkListFile:DIAGSChunkListFile:doVerifyImages:badDIAGSIsSoftError:statusReportingDisk:]: OSXDMG=//BaseSystem.dmg DIAGSDMG=(null) OSXChunkList=//BaseSystem.chunklist DIAGSChunkList=(null) doVfy=0 badDIAGSok=1 statusDisk=0x7fbd84105648=disk1s2=Untitled 1
+Apr 15 11:59:16 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMRecoveryFileCopier setOSXImageFile:DIAGSImageFile:OSXChunkListFile:DIAGSChunkListFile:doVerifyImages:badDIAGSIsSoftError:statusReportingDisk:]: err=0
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: CALC result phase 1/5 (after adding up logical file sizes in dmg + expected to create ourselves) requiredFileSpaceForRecoveryFilesULL=524869379 =Sbydiv=1025135 =MiBbydiv=500 =MBbydiv=524
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: CALC result phase 2/5 (converted to iomedia desired size) desiredMinRecoveryDiskIOMediaSizeULL=541646595 =Sbydiv=1057903 =MiBbydiv=516
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: CALC result phase 3/5 (after adding BootRoot iomedia allocation) desiredMinRecoveryDiskIOMediaSizeULL=642309891 =Sbydiv=1254511 =MiBbydiv=612
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: CALC result phase 4/5 (after applying minimum) desiredMinRecoveryDiskIOMediaSizeULL=650000000 =Sbydiv=1269531 =MiBbydiv=619 =MBbydiv=650
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: checking against recovery partition limit MAXimum
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: CALC result phase 5/5 (after applying MAXimum) desiredMinRecoveryDiskIOMediaSizeULL=650000000 =Sbydiv=1269531 =MiBbydiv=619 =MBbydiv=650
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: inMinSizeB=650000000 inSTORorNOT=(null) inPhyUDS=0x10927ec10=disk1s2=Untitled 1 inLogUDS=0x7fbd84105648=disk1s2=Untitled 1 inPhyREF=(null) inLogREF=(null) inLogMP=/Volumes/Untitled 1 inFileCopier=0x7fbd840014c0 inPct=16..95
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: existing conditions right after PHY=disk1s2: usedOrNotSpaceB=134221312 hasBooter=0 booterPartID/disk=0/(null) booterLocB/SizeB=0/0
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: existing booter GUID=(nil if no booter)=(null)
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: existing conditions of PHY: disk1s2 loc=S=409640=B=209735680 siz=S=976101344=B=499763888128=N=499763888128
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: existing conditions of LOG: disk1s2 (could be whole so no loc) siz=S=976101344=B=499763888128=N=499763888128
+Apr 15 11:59:18 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: READY TO DO CASE: case=Create_Carve_Simple spaceDeltaB=515781120 booterDeltaB=0 (adviceIfUnable=-69886)
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk15s2 Mount point: /Volumes/OS X Base System Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: OS X Base System is a valid target.
+Apr 15 11:59:18 Mac-Pro.local storagekitd[402]: DM Message: Shrinking host partition and creating new recovery partition
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk15s2 Mount point: /Volumes/OS X Base System Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: OS X Base System is a valid target.
+Apr 15 11:59:18 Mac-Pro.local storagekitd[402]: DM Message: Verifying file system.
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:18 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: Not Mounted Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:18 Mac-Pro.local storagekitd[402]: DM Message: Checking Journaled HFS Plus volume.
+Apr 15 11:59:18 Mac-Pro.local storagekitd[402]: DM Message: Checking extents overflow file.
+Apr 15 11:59:18 Mac-Pro.local storagekitd[402]: DM Message: Checking catalog file.
+Apr 15 11:59:19 Mac-Pro.local storagekitd[402]: DM Message: Checking multi-linked files.
+Apr 15 11:59:19 Mac-Pro.local storagekitd[402]: DM Message: Checking catalog hierarchy.
+Apr 15 11:59:19 Mac-Pro.local storagekitd[402]: DM Message: Checking extended attributes file.
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: Checking volume bitmap.
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: Checking volume information.
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: The volume Untitled 1 appears to be OK.
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: File system check exit code is 0.
+Apr 15 11:59:21 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: done fsck of donor slice; err=0
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: Shrinking target volume from 499763888128 to 499248103424 bytes
+Apr 15 11:59:21 Mac-Pro.local storagekitd[402]: DM Message: Shrinking file system
+Apr 15 11:59:21 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:21 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:21 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:22 Mac-Pro.local storagekitd[402]: DM Message: Shrinking partition and creating new recovery partition
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: inSliceDisk=0x10927ec10=disk1s2=Untitled 1 inPct=26..34 inNewSize=499248103424(B)=975093952(S) inMode=AddRecoveryEntryDuringTargetShrinkOrNoChange inOptionSize=0(B)=0(S) inNewEntriesRequested=(null) inFormatNewEntries=0 inLMBROption=(null) inDelegate=(null)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured valid mode
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured not (newSize=0=GrowToFit specified together with a special mode)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured not (AddRecoveryEntry mode plus triples specified)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured target is slice; ensured scheme is GPT; parent wholeDiskBSD/UDS=disk1
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: oldsize = 499763888128 B = 976101344 S
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: newsize = 499248103424 B = 975093952 S
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured not (size delta indicates grow yet shrink-specific modes are asked for)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: ensured not (size delta indicates shrink yet a grow-specific mode was asked for)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: targetPartID=2
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: targetHasBooterAtPartID=(nil if no booter)=(null) GUID=(null) size=(null) name=(null)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: doing DARegisterDiskPeekCallback to avoid DA dialogs
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef MKMediaCreateWithPath dev=/dev/rdisk1 opts={
+	    "Shared Writer" = 1;
+	    Writable = 1;
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft MKMediaCreateWithPath err=0
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: blocksize=512 kMINALIGNMENT=4096 kSECTORSIZE=512=512 alignment=8
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef MKCFReadMedia device=<MKMediaRef>: /dev/rdisk1=0x7fbd81e23a60 opts={
+	    "Include all" = 1;
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft MKCFReadMedia err=0 media={
+	    Schemes =     (
+	                {
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            "Partition ID" = 2;
+	                            Size = 976101344;
+	                            Type = "Apple_HFS";
+	                        }
+	                    );
+	                    Revision = 65536;
+	                    "_Reference" = <20f80084 bd7f0000>;
+	                }
+	            );
+	        }
+	    );
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: making DEL/ADD lists: RP mode: DEL+=none; ADD+=recovery
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: booterReqB roundup for UAM: rounded-512 up by 0 ; now booterReqB=0
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: booterReqB roundup for ALIGN: rounded-4096 up by 0 ; now booterReqB=0
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: done making DEL/ADD lists: DEL=(
+	) ADD=(
+	        {
+	        IOContent = "Apple_Boot";
+	        Name = "Recovery HD";
+	        Size = 0;
+	    }
+	) ADDOPTS=(
+	        {
+	        "Direct Mode" = 1;
+	        "Retain existing content" = 0;
+	    }
+	)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef doomPartitionsByPartID oldEntriesToDelArr=(
+	)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft doomPartitionsByPartID err=0
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef MKCFUpdateMedia() (del) media={
+	    Schemes =     (
+	                {
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            "Partition ID" = 2;
+	                            Size = 976101344;
+	                            Type = "Apple_HFS";
+	                        }
+	                    );
+	                    Revision = 65536;
+	                    "_Reference" = <20f80084 bd7f0000>;
+	                }
+	            );
+	        }
+	    );
+	} lib=CFBundle 0x7fbd81e23080 </System/Library/PrivateFrameworks/MediaKit.framework/Loaders/MKDrivers.bundle> (not loaded) align=8 opts={
+	    "Flexible Allocation" = 1;
+	    "Generate Freespace Records" = 1;
+	    "Legacy Mode" = 0;
+	    "UEFI Mode" = 0;
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft MKCFUpdateMedia() (del) err=0 media={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            "Partition ID" = 2;
+	                            Size = 976101344;
+	                            Type = "Apple_HFS";
+	                        }
+	                    );
+	                    Revision = 65536;
+	                    "_Reference" = <20f80084 bd7f0000>;
+	                }
+	            );
+	        }
+	    );
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef adjustPartitionsAtPartID2 newEntriesToAddArr=(
+	        {
+	        IOContent = "Apple_Boot";
+	        Name = "Recovery HD";
+	        Size = 0;
+	    }
+	)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft adjustPartitionsAtPartID2 err=0 updatedMediaDict={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            Options =                             {
+	                                "Direct Mode" = 1;
+	                                "Retain existing content" = 1;
+	                            };
+	                            "Partition ID" = 2;
+	                            Size = 975093952;
+	                            Type = "Apple_HFS";
+	                        },
+	                                                {
+	                            GUID = "EC2F3BC7-451C-49B5-8F2D-40D8CA251449";
+	                            Name = "Recovery HD";
+	                            Offset = 9Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef MKCFUpdateMedia() (changesize+add) media={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            Options =                             {
+	                                "Direct Mode" = 1;
+	                                "Retain existing content" = 1;
+	                            };
+	                            "Partition ID" = 2;
+	                            Size = 975093952;
+	                            Type = "Apple_HFS";
+	                        },
+	                                                {
+	                            GUID = "EC2F3BC7-451C-49B5-8F2D-40D8CA251449";
+	                            Name = "Recovery HD";
+	                            Offset = 975503592Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft MKCFUpdateMedia() (changesize+add) err=0 media={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            Options =                             {
+	                                "Direct Mode" = 1;
+	                                "Retain existing content" = 1;
+	                            };
+	                            "Partition ID" = 2;
+	                            Size = 975093952;
+	                            Type = "Apple_HFS";
+	                        },
+	                                                {
+	                            Flags = 9;
+	                            GUID = "EC2F3BC7-451C-49B5-8F2D-40D8CA251449";
+	                            Name = "Recovery HD";
+	Apr 15 11:59:22 Mac-Pro.local storagekitd[402]: DM Message: Modifying partition map
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: bef MKCFWriteMedia() media={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            Options =                             {
+	                                "Direct Mode" = 1;
+	                                "Retain existing content" = 1;
+	                            };
+	                            "Partition ID" = 2;
+	                            Size = 975093952;
+	                            Type = "Apple_HFS";
+	                        },
+	                                                {
+	                            Flags = 9;
+	                            GUID = "EC2F3BC7-451C-49B5-8F2D-40D8CA251449";
+	                            Name = "Recovery HD";
+	                        Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: aft MKCFWriteMedia() err=0 mediaDict={
+	    Schemes =     (
+	                {
+	            Alignment = 8;
+	            ID = GPT;
+	            Name = "GPT Partition Scheme";
+	            Sections =             (
+	                                {
+	                    GUID = "19AB6DA2-15DA-4D1D-8FBF-9D459DDD3D79";
+	                    ID = MAP;
+	                    "Media Block Count" = 976773101;
+	                    "Media Offset" = 34;
+	                    Offset = 34;
+	                    Overhead = 67;
+	                    Partitions =                     (
+	                                                {
+	                            GUID = "049F067A-DF77-49FC-BC8C-D1DE9ACF6931";
+	                            Name = "EFI System Partition";
+	                            Offset = 40;
+	                            "Partition ID" = 1;
+	                            Size = 409600;
+	                            Type = EFI;
+	                        },
+	                                                {
+	                            GUID = "451DCC02-6B02-4E71-BACF-CA3AC1F1FB2A";
+	                            Name = "Untitled 1";
+	                            Offset = 409640;
+	                            Options =                             {
+	                                "Direct Mode" = 1;
+	                                "Retain existing content" = 1;
+	                            };
+	                            "Partition ID" = 2;
+	                            Size = 975093952;
+	                            Type = "Apple_HFS";
+	                        },
+	                                                {
+	                            Flags = 9;
+	                            GUID = "EC2F3BC7-451C-49B5-8F2D-40D8CA251449";
+	                            Name = "Recovery HD";
+	              Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: closing dev with MK
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: MK closed; disks will now reappear, no BSD ordering guaranteed, so will use GUID-UUID match
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: looking for 1 new disks
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . new iter: now newEntriesToDiscoverDict={
+	    "EC2F3BC7-451C-49B5-8F2D-40D8CA251449" =     {
+	        IOContent = "Apple_Boot";
+	        Name = "Recovery HD";
+	        Size = 0;
+	    };
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . a (any) MK-reported new child of 0x10927e260=disk1 is GUID=EC2F3BC7-451C-49B5-8F2D-40D8CA251449 ; looking in IOReg
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . MATCH: NewDisk GUID=EC2F3BC7-451C-49B5-8F2D-40D8CA251449 appeared in IOReg
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . got from ioreg without expecting DA to know about it yet = NewDisk=0x10927e040=disk1s3
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . NewPartition of 0x10927e260=disk1 is GUID=EC2F3BC7-451C-49B5-8F2D-40D8CA251449 BSD=disk1s3
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . NewEntryDict={
+	    IOContent = "Apple_Boot";
+	    Name = "Recovery HD";
+	    Size = 0;
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . removing EC2F3BC7-451C-49B5-8F2D-40D8CA251449 from to-do dict
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . after removal, now num new entries still to do = 0
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . retry discovery unless timeout
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: . new iter: now newEntriesToDiscoverDict={
+	}
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: at FoundAllNewDisks
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: updating Windows boot.ini files as needed
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: if=1 DAUnregisterCallback for disk peeks
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: if=1 lower the DMT interrupt level
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: releases
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMToolPartitionDisk editMapAtPartition:newSize:mode:optionSize:newEntriesRequested:formatNewEntries:newEntriesCreated:lmbrOption:percentBegin:percentEnd:partitionDataDelegate:]: outErr=0 outNewEntriesCreated=(
+	    disk1s3
+	)
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ->T-[DMToolRecoveryPartition populateBooter:clearMode:copierForRecoveryFiles:hostOSXForBootRootFiles:statusReportingDisk:percentBegin:percentEnd:]: inPartitionUDS=0x10927e8d0=disk1s3 inClearMode=Format inRecCopier=0x7fbd840014c0 inBRHostMP=/Volumes/Untitled 1 inPct=35..87
+Apr 15 11:59:22 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition populateBooter:clearMode:copierForRecoveryFiles:hostOSXForBootRootFiles:statusReportingDisk:percentBegin:percentEnd:]: Format Mode, so arrange to newfs it
+Apr 15 11:59:22 Mac-Pro.local storagekitd[402]: DM Message: Formatting booter
+Apr 15 11:59:22 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:22 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:22 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:23 Mac-Pro.local storagekitd[402]: DM Message: Initialized /dev/rdisk1s3 as a 620 MB case-insensitive HFS Plus volume with a 8192k journal
+Apr 15 11:59:23 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition populateBooter:clearMode:copierForRecoveryFiles:hostOSXForBootRootFiles:statusReportingDisk:percentBegin:percentEnd:]: successful creation of RecoverySystem directory on booter volume
+Apr 15 11:59:23 Mac-Pro.local storagekitd[402]: DM Message: Creating recovery system directory
+Apr 15 11:59:23 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot
+Apr 15 11:59:23 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:24 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot
+Apr 15 11:59:24 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:44 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot/BaseSystem.dmg
+Apr 15 11:59:44 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: ensuring owner/group=0/0 settings on /Volumes/Recovery HD/com.apple.recovery.boot/BaseSystem.chunklist
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolBootPreference copyFileFromPath:toDirAtPath:newName:disk:percentBegin:percentEnd:]: setAttributes success=1
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMToolRecoveryPartition populateBooter:clearMode:copierForRecoveryFiles:hostOSXForBootRootFiles:statusReportingDisk:percentBegin:percentEnd:]: retErr=0
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMToolRecoveryPartition ensureBooter:storage:phyUDS:logUDS:phyREF:logREF:copierForRecoveryFiles:hostOSXForBootRootFiles:recBSD:percentBegin:percentEnd:]: retErr=0 outDisk=disk1s3
+Apr 15 11:59:45 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: final booter=recoveryDisk=disk1s3=0x10927ead0=disk1s3=Recovery HD
+Apr 15 11:59:45 Mac-Pro.local storagekitd[402]: DM Message: Mounting recovery partition
+Apr 15 11:59:45 Mac-Pro.local storagekitd[402]: DM Message: Blessing boot file
+Apr 15 11:59:45 Mac-Pro.local storagekitd[402]: DM Message: Marking recovery partition
+Apr 15 11:59:46 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: at Exit; err=0
+Apr 15 11:59:46 Mac-Pro.local diskmanagementd[403]: DM ..T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]: recoveryDiskBSD=disk1s3 physicalDonorBSD=disk1s2
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk15s2 Mount point: Not Mounted Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:46 Mac-Pro.local diskmanagementd[403]: DM <-T-[DMToolRecoveryPartition ensureRecoveryPartitionForVolume:]
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Ensure recovery completed successfully.
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Preparing disk for OS Install.
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Can't set background color, no compatible machines plist found
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:46 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:47 Mac-Pro.local storagekitd[402]: Journaling already enabled for disk: <DADisk 0x7fe3d9404ba0 [0x103762ed0]>{id = /dev/disk1s2}
+Apr 15 11:59:47 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 11:59:47 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacData Type: kSKDiskTypeHFS }
+Apr 15 11:59:47 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: Activated virtual memory backing store at mount point '/Volumes/Untitled 1'
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: Will try to attach log to: /Volumes/Untitled 1/private/var/log/install.log
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: PackageKit: Enqueuing install with default quality of service (utility)
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: PackageKit: ----- Begin install -----
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: PackageKit: request=PKInstallRequest <13 packages, destination=/Volumes/Untitled 1>
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: PackageKit: packages=(
+	    "PKLeopardPackage <file:///System/Installation/Packages/BaseSystemBinaries.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/BaseSystemResources.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/Essentials.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/BSD.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/JavaTools.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/AdditionalEssentials.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/AsianLanguagesSupport.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/JavaEssentials.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/MediaFiles.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/OxfordDictionaries.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/OSInstall.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/AdditionalSpeechVoices.pkg>",
+	    "PKLeopardPackage <file:///System/Installation/Packages/X11redirect.pkg>"
+	)
+Apr 15 11:59:48 Mac-Pro.local OSInstaller[401]: Can not connect to /var/run/systemkeychaincheck.socket: No such file or directory
+Apr 15 11:59:58 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/BaseSystemBinaries.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:00:10 Mac-Pro.local OSInstaller[401]: PackageKit: Using / as external payload root for package com.apple.pkg.BaseSystemResources
+Apr 15 12:00:10 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/BaseSystemResources.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:03:31 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/Essentials.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:07:37 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/BSD.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:11 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/JavaTools.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:14 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/AdditionalEssentials.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:23 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/AsianLanguagesSupport.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:24 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/JavaEssentials.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:40 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/MediaFiles.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:08:53 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/OxfordDictionaries.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:09:13 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/AdditionalSpeechVoices.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:09:18 Mac-Pro.local OSInstaller[401]: PackageKit: Extracting file:///System/Installation/Packages/X11redirect.pkg (destination=/Volumes/Untitled 1/.OSInstallSandboxPath/Root, uid=0)
+Apr 15 12:09:18 Mac-Pro.local OSInstaller[401]: PackageKit: update_dyld_shared_cache -root /Volumes/Untitled 1/.OSInstallSandboxPath/Root
+Apr 15 12:09:49 Mac-Pro.local OSInstaller[401]: PackageKit: Triggering XPC service cache rebuild on next boot
+Apr 15 12:09:49 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "preinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.BaseSystemResources.NtOSEF
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "preinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.Essentials.6VdYsl
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "preinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.BSD.3GlcYE
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "preinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.OSInstall.1GtcHc
+Apr 15 12:09:50 Mac-Pro.local _mdnsresponder[476]: Running Install Scripts . . .
+Apr 15 12:09:50 Mac-Pro.local _mdnsresponder[478]: Begin script: preinstall
+Apr 15 12:09:50 Mac-Pro.local _mdnsresponder[480]: End script: preinstall
+Apr 15 12:09:50 Mac-Pro.local _mdnsresponder[481]: 1 Install Scripts run.
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: Using trashcan path /Volumes/Untitled 1/.OSInstallSandboxPath/Trashes for sandbox /Volumes/Untitled 1/.OSInstallSandboxPath
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: Shoving /Volumes/Untitled 1/.OSInstallSandboxPath/Root (19 items) to /Volumes/Untitled 1
+Apr 15 12:09:50 Mac-Pro.local OSInstaller[401]: PackageKit: kextcache -update-volume /Volumes/Untitled 1 -Installer
+Apr 15 12:10:11 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "postinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.BaseSystemResources.NtOSEF
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[488]: Running Install Scripts . . .
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[490]: Begin script: permissions
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[493]: End script: permissions
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[494]: 1 Install Scripts run.
+Apr 15 12:10:11 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "postinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.Essentials.6VdYsl
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[497]: Running Install Scripts . . .
+Apr 15 12:10:11 Mac-Pro.local _mdnsresponder[499]: Begin script: aclmodify.pl
+Apr 15 12:10:21 Mac-Pro.local OSInstaller[401]: postinstall: chmod: Failed to clear ACL on file /Volumes/Untitled 1/System/Library/User Template/Non_localized/Downloads/About Downloads.lpdf: No such file or directory
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1639]: End script: aclmodify.pl
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1640]: Begin script: addLoginItem.pl
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1643]: End script: addLoginItem.pl
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1644]: Begin script: checkIfPhysicalMedia
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1646]: End script: checkIfPhysicalMedia
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1647]: Begin script: createDSStore
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1652]: End script: createDSStore
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1653]: Begin script: createJavaExtDir.sh
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1660]: End script: createJavaExtDir.sh
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1661]: Begin script: createPPDsDirectory
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1663]: End script: createPPDsDirectory
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1664]: Begin script: createSynthesizersDir
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1671]: End script: createSynthesizersDir
+Apr 15 12:10:21 Mac-Pro.local _mdnsresponder[1672]: Begin script: generateCache
+Apr 15 12:10:24 Mac-Pro.local OSInstaller[401]: postinstall: 2017-04-15 12:10:24.260 update_automator_cache[1676:5807] Error finding Automator.app by bundle identifier. Not calling LS for registration.
+Apr 15 12:10:28 Mac-Pro.local _mdnsresponder[1680]: End script: generateCache
+Apr 15 12:10:28 Mac-Pro.local _mdnsresponder[1681]: Begin script: installerFailureRequests
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1685]: End script: installerFailureRequests
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1686]: Begin script: moveAsideHome
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1689]: End script: moveAsideHome
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1690]: Begin script: moveStoreManifest
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1692]: End script: moveStoreManifest
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1693]: Begin script: rmQTPluginMIMEplist
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1696]: End script: rmQTPluginMIMEplist
+Apr 15 12:10:29 Mac-Pro.local _mdnsresponder[1697]: Begin script: runChrooted.sh
+Apr 15 12:10:34 Mac-Pro.local _mdnsresponder[1716]: End script: runChrooted.sh
+Apr 15 12:10:34 Mac-Pro.local _mdnsresponder[1717]: Begin script: setACLs
+Apr 15 12:10:34 Mac-Pro.local _mdnsresponder[1767]: End script: setACLs
+Apr 15 12:10:34 Mac-Pro.local _mdnsresponder[1768]: 14 Install Scripts run.
+Apr 15 12:10:34 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "postinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.BSD.3GlcYE
+Apr 15 12:10:34 Mac-Pro.local _mdnsresponder[1771]: Running Install Scripts . . .
+Apr 15 12:10:35 Mac-Pro.local _mdnsresponder[1773]: Begin script: dumpemacs.sh
+Apr 15 12:10:35 Mac-Pro.local _mdnsresponder[1783]: End script: dumpemacs.sh
+Apr 15 12:10:35 Mac-Pro.local _mdnsresponder[1784]: Begin script: fixnortinst.sh
+Apr 15 12:10:35 Mac-Pro.local _mdnsresponder[1787]: End script: fixnortinst.sh
+Apr 15 12:10:35 Mac-Pro.local _mdnsresponder[1788]: Begin script: postfixChrooted
+Apr 15 12:10:42 Mac-Pro.local _mdnsresponder[2564]: End script: postfixChrooted
+Apr 15 12:10:42 Mac-Pro.local _mdnsresponder[2565]: 3 Install Scripts run.
+Apr 15 12:10:42 Mac-Pro.local OSInstaller[401]: PackageKit: Executing script "postinstall" in /Volumes/Untitled 1/.OSInstallSandboxPath/Scripts/com.apple.pkg.OSInstall.1GtcHc
+Apr 15 12:10:42 Mac-Pro.local _mdnsresponder[2568]: Running Install Scripts . . .
+Apr 15 12:10:43 Mac-Pro.local _mdnsresponder[2570]: Begin script: postinstall
+Apr 15 12:10:44 Mac-Pro.local _mdnsresponder[2580]: End script: postinstall
+Apr 15 12:10:44 Mac-Pro.local _mdnsresponder[2581]: Begin script: setHiddenFiles
+Apr 15 12:10:45 Mac-Pro.local _mdnsresponder[2596]: End script: setHiddenFiles
+Apr 15 12:10:45 Mac-Pro.local _mdnsresponder[2597]: 2 Install Scripts run.
+Apr 15 12:10:47 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.BaseSystemBinaries to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:10:55 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.BaseSystemResources to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:21 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.Essentials to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:30 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.BSD to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:30 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.JavaTools to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:34 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.AdditionalEssentials to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:34 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.AsianLanguagesSupport to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:34 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.JavaEssentials to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:34 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.MediaFiles to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:34 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.OxfordDictionaries to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.AdditionalSpeechVoices to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: PackageKit: Writing receipt for com.apple.pkg.X11redirect to /Volumes/Untitled 1/private/var/db/receipts
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: Installed "OS X" ()
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: PackageKit: ----- End install -----
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: PackageKit: 767.4s elapsed install time
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: InstallType cookie file was successfully written for Setup Assistant to pick up.
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: Can't find system audio level
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: Evaluating 1 disks
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: Evaluating SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacSystem Type: kSKDiskTypeHFS }
+Apr 15 12:12:35 Mac-Pro.local OSInstaller[401]: Untitled 1 is a valid target.
+Apr 15 12:12:36 Mac-Pro.local storagekitd[402]: Blessed disk: Bless disk operation for disk: SKDisk { BSD Name: disk1s2 Mount point: /Volumes/Untitled 1 Role: kSKDiskRoleLegacyMacSystem Type: kSKDiskTypeHFS }
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Source is not target, not cleaning up IA
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Somehow we don't have a mutable product to cleanup?
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: No packages directory found to search for SMCPayloads
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: No packages directory found to search for EFIPayloads
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: ------- Install Complete -------
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Run SMC updater tool: 0 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Ensure recovery system: 30 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Install packages: 767 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Run EFI updater tool: 0 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Post install cleanup: 0 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Attaching the install log: 0 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Preparing disk for install: 2 seconds
+Apr 15 12:12:36 Mac-Pro.local OSInstaller[401]: Verify and repair disk: 4 seconds
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 2017-04-15 12:12:36.266 OS X Installer[401:3226] An uncaught exception was raised
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 2017-04-15 12:12:36.266 OS X Installer[401:3226] *** -[NSFileManager copyItemAtPath:toPath:error:]: source path is nil
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 2017-04-15 12:12:36.266 OS X Installer[401:3226] (
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	0   CoreFoundation                      0x00000001080ba03c __exceptionPreprocess + 172
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	1   libobjc.A.dylib                     0x00000001069a076e objc_exception_throw + 43
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	2   CoreFoundation                      0x00000001080b9eed +[NSException raise:format:] + 205
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	3   Foundation                          0x0000000106508a42 -[NSFileManager copyItemAtPath:toPath:error:] + 116
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	4   OSInstaller                         0x00000001060634f4 -[OSIMessageTracer writeToTarget] + 246
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	5   OSInstaller                         0x000000010605c629 __35-[OSInstallController startInstall]_block_invoke + 3049
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	6   libdispatch.dylib                   0x000000010a4cb323 _dispatch_call_block_and_release + 12
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	7   libdispatch.dylib                   0x000000010a4c6c13 _dispatch_client_callout + 8
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	8   libdispatch.dylib                   0x000000010a4c988f _dispatch_root_queue_drain + 935
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	9   libdispatch.dylib                   0x000000010a4d7fe4 _dispatch_worker_thread3 + 91
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	10  libsystem_pthread.dylib             0x000000010a826a9d _pthread_wqthread + 729
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	11  libsystem_pthread.dylib             0x000000010a8243dd start_wqthread + 13
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: )
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 2017-04-15 12:12:36.267 OS X Installer[401:3226] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[NSFileManager copyItemAtPath:toPath:error:]: source path is nil'
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: *** First throw call stack:
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: (
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	0   CoreFoundation                      0x00000001080ba03c __exceptionPreprocess + 172
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	1   libobjc.A.dylib                     0x00000001069a076e objc_exception_throw + 43
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	2   CoreFoundation                      0x00000001080b9eed +[NSException raise:format:] + 205
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	3   Foundation                          0x0000000106508a42 -[NSFileManager copyItemAtPath:toPath:error:] + 116
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	4   OSInstaller                         0x00000001060634f4 -[OSIMessageTracer writeToTarget] + 246
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	5   OSInstaller                         0x000000010605c629 __35-[OSInstallController startInstall]_block_invoke + 3049
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	6   libdispatch.dylib                   0x000000010a4cb323 _dispatch_call_block_and_release + 12
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	7   libdispatch.dylib                   0x000000010a4c6c13 _dispatch_client_callout + 8
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	8   libdispatch.dylib                   0x000000010a4c988f _dispatch_root_queue_drain + 935
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	9   libdispatch.dylib                   0x000000010a4d7fe4 _dispatch_worker_thread3 + 91
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	10  libsystem_pthread.dylib             0x000000010a826a9d _pthread_wqthread + 729
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: 	11  libsystem_pthread.dylib             0x000000010a8243dd start_wqthread + 13
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: )
+Apr 15 12:12:36 Mac-Pro.local Unknown[388]: libc++abi.dylib: terminating with uncaught exception of type NSException
+Apr 15 12:12:46 Mac-Pro.local storagekitd[402]: Removing client connection <SKDaemonConnection: 0x7fe3db102570>
+Apr 15 12:12:46 Mac-Pro.local storagekitd[402]: No more connections, storagekitd will exit...
+Apr 15 12:12:46 Mac-Pro.local Language Chooser[387]: Child process exited 6
+Apr 15 12:12:46 Mac-Pro.local Unknown[2605]: Launching the Installer Crash Log Viewer
+Apr 15 12:12:46 Mac-Pro.local Viewer[2606]: LSExceptions [0x7fd9baf0d5b0] loaded
+Apr 15 12:12:57 Mac-Pro.local Viewer[2606]: LSExceptions [0x7fd9baf0d5b0] unloaded
+Apr 15 12:13:04 Mac-Pro.local Viewer[2606]: GetDYLDEntryPointWithImage(/System/Library/PrivateFrameworks/CacheDelete.framework/CacheDelete,CacheDeleteCopyPurgeableSpaceWithInfo) failed.
+Apr 15 12:13:04 Mac-Pro.local Viewer[2606]: Connection to sharingd became invalid
+Apr 15 12:13:04 Mac-Pro.local Viewer[2606]: Folder Manager is being asked to create a folder (docs) while running as uid 0
+Apr 15 12:13:04 Mac-Pro.local Viewer[2606]: CoreServices logging is enabled,
+Apr 15 12:13:04 Mac-Pro.local Viewer[2606]: SFL Favorites initialized.
